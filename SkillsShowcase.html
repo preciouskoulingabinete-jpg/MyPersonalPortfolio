@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skills Showcase</title>
+<style>
+        * {
+                box-sizing: border-box;
+        }
+
+        body {
+                margin: 0;
+                background: #ffffdd;
+                color: #542d3d;
+                font-family: Papyrus, fantasy;
+        }
+
+        .site-header {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 32px;
+                padding: 16px 7%;
+                background: rgb(214 83 123 / 12%);
+                border-bottom: 2px solid rgb(214 83 123 / 12%);
+        }
+
+        .logo {
+                display: block;
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                object-fit: cover;
+        }
+
+        nav ul {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 24px;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+        }
+
+        nav a {
+                position: relative;
+                display: inline-block;
+                color: inherit;
+                text-decoration: none;
+                transition: color 180ms ease;
+        }
+
+        nav a::after {
+                position: absolute;
+                right: 0;
+                bottom: -4px;
+                left: 0;
+                height: 2px;
+                background: #d6537b;
+                content: "";
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: transform 180ms ease;
+        }
+
+        nav a:hover,
+        nav a:focus-visible {
+                color: #d6537b;
+        }
+
+        nav a:hover::after,
+        nav a:focus-visible::after {
+                transform: scaleX(1);
+        }
+
+        .showcase {
+                max-width: 1100px;
+                margin: 0 auto;
+                padding: 40px 7%;
+        }
+
+        .showcase > h1 {
+                margin: 0;
+                color: #d6537b;
+                font-size: clamp(2rem, 5vw, 4rem);
+                line-height: 1.1;
+        }
+
+        .skill-section {
+                display: grid;
+                grid-template-columns: minmax(0, 1fr) minmax(240px, 350px);
+                align-items: center;
+                gap: 48px;
+                padding: 36px 0;
+                border-bottom: 1px solid rgb(84 45 61 / 18%);
+        }
+
+        .skill-section--dance {
+                grid-template-columns: minmax(0, 1fr) minmax(280px, 480px);
+        }
+
+        .skill-section h2 {
+                margin: 0 0 12px;
+                color: #d6537b;
+                font-size: 1.8rem;
+        }
+
+        .skill-section ul {
+                margin: 0;
+                padding-left: 24px;
+                line-height: 1.8;
+        }
+
+        .skill-media {
+                display: block;
+                width: 100%;
+                height: auto;
+                border-radius: 12px;
+        }
+
+        .skill-media.video {
+                aspect-ratio: 1;
+                object-fit: cover;
+        }
+
+        .skill-media.drawing {
+                aspect-ratio: 10 / 10;
+                object-fit: cover;
+        }
+
+        .skill-media.cosplay-photo {
+                aspect-ratio: 1;
+                object-fit: cover;
+        }
+
+        footer {
+                padding: 20px 7%;
+                border-top: 1px solid rgb(84 45 61 / 18%);
+                text-align: center;
+        }
+
+        footer p {
+                margin: 0;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+                nav a,
+                nav a::after {
+                        transition: none;
+                }
+        }
+
+        @media (max-width: 650px) {
+                .site-header {
+                        align-items: flex-start;
+                        flex-direction: column;
+                }
+
+                nav ul {
+                        gap: 12px 20px;
+                }
+
+                .skill-section {
+                        grid-template-columns: 1fr;
+                        gap: 24px;
+                        padding: 28px 0;
+                }
+
+                .skill-media {
+                        max-width: 350px;
+                }
+        }
+</style>
+</head>
+<body>
+        <header class="site-header">
+                <img class="logo" src="C:\Users\Client\Downloads\logopic.png" alt="Precious's logo">
+                <nav>
+                        <ul>
+                                <li><a href="C:\Users\Client\MyPersonalProject\MyPersonalPortfolio.html">Home</a></li>
+                                <li><a href="C:\Users\Client\MyPersonalProject\SomeFactsAboutMe.html">About</a></li>
+                                <li><a href="C:\Users\Client\MyPersonalProject\SkillsShowcase.html">Showcase</a></li>
+                                <li><a href="C:\Users\Client\MyPersonalProject\ReachOut.html">Contacts</a></li>
+                        </ul>
+                </nav>
+        </header>
+
+        <main class="showcase">
+                <h1>Skills Showcase</h1>
+
+                <section class="skill-section skill-section--dance">
+                        <div>
+                                <h2>Dance</h2>
+                                <ul>
+                                        <li>Started since the age of 4</li>
+                                        <li>Joined dance organizations (eg. Silakbo (2024-2026), Starzone Talents (2025--), Pasundayaw Dance Troupe (2026--))</li>
+                                </ul>
+                        </div>
+                        <video class="skill-media video" controls autoplay loop muted>
+                                <source src="C:\Users\Client\Downloads\f194b476-a254-48f3-9b0c-f2009b048af6.m4v" type="video/mp4">
+                        </video>
+                </section>
+
+                <section class="skill-section">
+                        <div>
+                                <h2>Digital Arts</h2>
+                                <ul>
+                                        <li>Started since 2021</li>
+                                        <li>Has done art requests and art trades online</li>
+                                </ul>
+                        </div>
+                                <img class="skill-media drawing" src="C:\Users\Client\Downloads\digiart.png" alt="Digital art by Precious">
+                </section>
+
+                <section class="skill-section">
+                        <div>
+                                <h2>Cosplay</h2>
+                                <ul>
+                                        <li>Started since 2023</li>
+                                        <li>Have gone to some cosplay events in local areas</li>
+                                </ul>
+                        </div>
+                                <img class="skill-media cosplay-photo" src="C:\Users\Client\Downloads\cos.png" alt="Precious's cosplay">
+                </section>
+        </main>
+        <footer>
+                <p>&copy; 2026 Precious Koulin T. Gabinete. All rights reserved.</p>
+        </footer>
+</body>
+</html>
